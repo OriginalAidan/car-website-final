@@ -1,0 +1,121 @@
+/* styles.css */
+
+/* Apply generic styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header, nav, footer, main, section {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #007BFF;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive image styling */
+img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes extra space below the image */
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Specific styles for product images */
+.product img {
+    max-width: 80%; /* Smaller max-width for product-specific images */
+    margin-top: 20px; /* Adds some space above the product image */
+}
+.accordion-item {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-bottom: 1px solid #ffffff55;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-item:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #007BFF;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Keyframes for fadeIn effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive image styling within accordion */
+.content img {
+    max-width: 40%; /* Limit image width to 100% of its container */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 20px; /* Adds space below the image */
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .product img {
+        max-width: 100%; /* Allows product images to be wider on smaller screens */
+    }
+}
+
